@@ -20,6 +20,13 @@ const initialState = {
 export default function App() {
   const [state, setState] = useState(initialState)
 
+  const onChange = evt => {
+    const { value } = evt.target
+    setState({
+      ...state,
+      nameInput: value,
+    })
+  }
   const onSubmit = evt => {
     evt.preventDefault()
     setState({
@@ -30,13 +37,6 @@ export default function App() {
         completed: false,
       }),
       nameInput: ''
-    })
-  }
-  const onChange = evt => {
-    const { value } = evt.target
-    setState({
-      ...state,
-      nameInput: value,
     })
   }
   const toggleShouldShow = () => {
