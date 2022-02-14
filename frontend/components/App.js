@@ -3,7 +3,6 @@ import Form from './Form'
 import TodoList from './TodoList'
 
 let id = 0
-
 const getId = () => ++id
 
 const initialTodos = [
@@ -33,7 +32,6 @@ export default function App() {
       nameInput: ''
     })
   }
-
   const onChange = evt => {
     const { value } = evt.target
     setState({
@@ -41,14 +39,12 @@ export default function App() {
       nameInput: value,
     })
   }
-
   const toggleShouldShow = () => {
     setState({
       ...state,
       shouldShowCompleteds: !state.shouldShowCompleteds
     })
   }
-
   const toggleStatus = id => () => {
     setState({
       ...state,
