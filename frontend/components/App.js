@@ -67,12 +67,12 @@ export default function App() {
         toggleStatus={toggleStatus}
       />
       <Form
-        value={state.input}
         onSubmit={onSubmit}
         onChange={onChange}
         toggleShouldShow={toggleShouldShow}
         displayCompleteds={state.shouldShowCompleteds}
-        disabled={!state.input.length}
+        disabled={!state.nameInput.length}
+        value={state.nameInput}
       />
     </div>
   )
