@@ -3,7 +3,7 @@ import React from 'react'
 export default class Form extends React.Component {
   render() {
     const {
-      value,
+      values,
       onSubmit,
       onChange,
       toggleShouldShow,
@@ -14,10 +14,11 @@ export default class Form extends React.Component {
       <>
         <form id="todoForm" onSubmit={onSubmit}>
           <input
-            value={value}
+            value={values.name}
             onChange={onChange}
-            type="text"
             placeholder="Type todo"
+            name="name"
+            type="text"
           />
           <input type="submit" disabled={disabled} />
         </form>

@@ -11,38 +11,39 @@ const initialTodos = [
   { id: getId(), name: "Have fun", completed: false },
 ]
 
+const initialForm = {
+  name: '',
+}
+
 const initialState = {
+  form: initialForm,
   todos: initialTodos,
-  shouldShowCompleteds: true,
-  nameInput: '',
+  displayCompleteds: true,
 }
 
 export default function App() {
   const [state, setState] = useState(initialState)
 
   const onChange = evt => {
-    const { value } = evt.target
-    setState({
-      ...state,
-      nameInput: value,
-    })
+    const { name, value } = evt.target
+    setState({ ...state, form: { [name]: value } })
   }
   const onSubmit = evt => {
     evt.preventDefault()
     setState({
       ...state,
+      form: initialForm,
       todos: state.todos.concat({
         id: getId(),
-        name: state.nameInput,
+        name: state.form.name,
         completed: false,
       }),
-      nameInput: ''
     })
   }
   const toggleShouldShow = () => {
     setState({
       ...state,
-      shouldShowCompleteds: !state.shouldShowCompleteds
+      displayCompleteds: !state.displayCompleteds
     })
   }
   const toggleStatus = id => () => {
@@ -59,16 +60,16 @@ export default function App() {
     <div>
       <TodoList
         todos={state.todos}
-        displayCompleteds={state.shouldShowCompleteds}
+        displayCompleteds={state.displayCompleteds}
         toggleStatus={toggleStatus}
       />
       <Form
         onSubmit={onSubmit}
         onChange={onChange}
         toggleShouldShow={toggleShouldShow}
-        displayCompleteds={state.shouldShowCompleteds}
-        disabled={!state.nameInput.length}
-        value={state.nameInput}
+        displayCompleteds={state.displayCompleteds}
+        disabled={!state.form.name.length}
+        values={state.form}
       />
     </div>
   )
