@@ -43,7 +43,8 @@ function Form(props) {
 }
 const mapStateToProps = state => {
   return {
-    
+    form: state.form,
+    displayCompletedTodos: state.displayCompletedTodos,
   }
 }
-export default connect(st => st, actions)(Form)
+export default connect(mapStateToProps, actions)(Form)
