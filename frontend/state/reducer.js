@@ -10,7 +10,8 @@ const initialTodos = [
 function todos(todosStateSlice = initialTodos, action) {
   switch (action.type) {
     case types.ADD_NEW_TODO:
-      return todosStateSlice.concat(action.payload)
+      // return todosStateSlice.concat(action.payload)
+      return [...todosStateSlice, action.payload]
     case types.TOGGLE_TODO_COMPLETION:
       return todosStateSlice.map(todo => {
         return todo.id === action.payload
