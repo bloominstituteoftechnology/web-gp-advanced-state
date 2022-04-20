@@ -4,6 +4,8 @@ import * as types from './action-types'
 const initialTodos = []
 function todos(todosStateSlice = initialTodos, action) {
   switch (action.type) {
+    case types.POPULATE_ALL_TODOS:
+      
     case types.ADD_NEW_TODO:
       // return todosStateSlice.concat(action.payload)
       return [...todosStateSlice, action.payload]
