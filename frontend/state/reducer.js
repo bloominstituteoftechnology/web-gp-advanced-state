@@ -7,6 +7,7 @@ function todos(todosStateSlice = initialTodos, action) {
     case types.POPULATE_ALL_TODOS:
       return action.payload
     case types.ADD_NEW_TODO:
+      debugger
       // return todosStateSlice.concat(action.payload)
       return [...todosStateSlice, action.payload]
     case types.TOGGLE_TODO_COMPLETION:
