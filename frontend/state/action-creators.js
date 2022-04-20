@@ -1,5 +1,3 @@
-// STEP 3 👈
-// action creators
 import * as types from './action-types'
 import { getId } from './helpers'
 

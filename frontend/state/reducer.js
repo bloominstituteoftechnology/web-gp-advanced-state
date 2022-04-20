@@ -22,10 +22,7 @@ function todos(todosStateSlice = initialTodos, action) {
   }
 }
 
-const initialForm = {
-  todoName: '',
-}
-
+const initialForm = { todoName: '' }
 function form(formStateSlice = initialForm, action) {
   switch (action.type) {
     case types.INPUT_CHANGE: {
