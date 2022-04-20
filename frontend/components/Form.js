@@ -10,7 +10,7 @@ function Form(props) {
     // action creators
     toggleDisplayCompleteds,
     changeInput,
-    addTodo,
+    postNewTodoToApi,
   } = props
 
   const onChange = evt => {
@@ -19,7 +19,7 @@ function Form(props) {
   }
   const onSubmit = evt => {
     evt.preventDefault()
-    addTodo(form.todoName)
+    postNewTodoToApi(form.todoName)
   }
   return (
     <>
