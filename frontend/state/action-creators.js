@@ -29,10 +29,13 @@ export const fetchTodosFromApi = () => dispatch => {
       debugger
     })
 }
-export const addTodo = name => {
-  return {
-    type: types.ADD_NEW_TODO,
-    payload: { id: getId(), completed: false, name, },
-  }
+// the old one
+// export const addTodo = name => {
+//   return {
+//     type: types.ADD_NEW_TODO,
+//     payload: { id: getId(), completed: false, name, },
+//   }
+// }
+export const postNewTodo = name => dispatch => {
+  
 }
-export const postNewTodo = name =>
