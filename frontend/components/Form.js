@@ -7,7 +7,6 @@ function Form(props) {
     // states
     form,
     displayCompletedTodos,
-    todos,
     // action creators
     toggleDisplayCompleteds,
     changeInput,
