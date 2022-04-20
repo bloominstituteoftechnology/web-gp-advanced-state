@@ -30,4 +30,4 @@ class TodoList extends React.Component {
     )
   }
 }
-export default connect(st => st, actions)(TodoList)
+export default connect(state => state, actions)(TodoList)
