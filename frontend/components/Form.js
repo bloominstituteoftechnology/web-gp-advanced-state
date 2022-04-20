@@ -7,6 +7,7 @@ function Form(props) {
     // states
     form,
     displayCompletedTodos,
+    todos,
     // action creators
     toggleDisplayCompleteds,
     changeInput,
@@ -39,5 +40,10 @@ function Form(props) {
       </button>
     </>
   )
+}
+const mapStateToProps = state => {
+  return {
+    
+  }
 }
 export default connect(st => st, actions)(Form)
