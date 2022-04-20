@@ -24,4 +24,4 @@ export const toggleTodoCompletion = todoId => {
     payload: todoId,
   }
 }
-export const 
+export const fetchTodosFromApi
