@@ -29,7 +29,7 @@ export const fetchTodosFromApi = () => dispatch => {
   axios.get('http://localhost:9000/api/todos')
     .then(res => {
       const allTodosFromAPI = res.data.data
-      
+      dispatch({ type: types.POPULATE_ALL_TODOS, payload: allTodosFromAPI })
     })
     .catch(err => {
       debugger
