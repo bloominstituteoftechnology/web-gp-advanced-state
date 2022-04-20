@@ -1,12 +1,7 @@
 import { combineReducers } from 'redux'
-import { getId } from './helpers'
 import * as types from './action-types'
 
-const initialTodos = [
-  { id: getId(), name: "Walk the dog", completed: false },
-  { id: getId(), name: "Learn React", completed: true },
-  { id: getId(), name: "Have fun", completed: false },
-]
+const initialTodos = []
 function todos(todosStateSlice = initialTodos, action) {
   switch (action.type) {
     case types.ADD_NEW_TODO:
