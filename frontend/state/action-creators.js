@@ -1,5 +1,4 @@
 import * as types from './action-types'
-import { getId } from './helpers'
 import axios from 'axios'
 
 export const changeInput = ({ name, value }) => {
