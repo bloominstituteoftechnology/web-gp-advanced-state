@@ -11,6 +11,7 @@ function Form(props) {
     toggleDisplayCompleteds,
     changeInput,
     postNewTodoToApi,
+    disabled,
   } = props
 
   const onChange = evt => {
@@ -31,7 +32,7 @@ function Form(props) {
           name="todoName"
           type="text"
         />
-        <input type="submit" disabled={!form.todoName.length} />
+        <input type="submit" disabled={disabled} />
       </form>
 
       <button onClick={toggleDisplayCompleteds}>
@@ -44,6 +45,7 @@ const mapStateToProps = state => {
   return {
     form: state.form,
     displayCompletedTodos: state.displayCompletedTodos,
+    disabled: !state.form.todoName.length
   }
 }
 export default connect(mapStateToProps, actions)(Form)
