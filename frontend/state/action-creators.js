@@ -34,12 +34,6 @@ export const postNewTodoToApi = name => dispatch => {
       debugger
     })
 }
-// export const toggleTodoCompletion = todoId => {
-//   return {
-//     type: types.TOGGLE_TODO_COMPLETION,
-//     payload: todoId,
-//   }
-// }
 export const toggleTodoCompletion = id => dispatch => {
   axios.patch(`http://localhost:9000/api/todos/${id}`)
     .then(res => {
