@@ -11,6 +11,7 @@ function Form(props) {
     toggleDisplayCompleteds,
     changeInput,
     postNewTodoToApi,
+    // info derived from state
     disabled,
   } = props
 
@@ -45,7 +46,7 @@ const mapStateToProps = state => {
   return {
     form: state.form,
     displayCompletedTodos: state.displayCompletedTodos,
-    disabled: !state.form.todoName.length
+    disabled: !state.form.todoName.length,
   }
 }
 export default connect(mapStateToProps, actions)(Form)
