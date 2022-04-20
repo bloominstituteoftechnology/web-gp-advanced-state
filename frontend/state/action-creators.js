@@ -13,12 +13,6 @@ export const toggleDisplayCompleteds = () => {
     type: types.TOGGLE_DISPLAY_COMPLETEDS,
   }
 }
-export const toggleTodoCompletion = todoId => {
-  return {
-    type: types.TOGGLE_TODO_COMPLETION,
-    payload: todoId,
-  }
-}
 export const fetchTodosFromApi = () => dispatch => {
   axios.get('http://localhost:9000/api/todos')
     .then(res => {
@@ -40,7 +34,13 @@ export const postNewTodoToApi = name => dispatch => {
       debugger
     })
 }
-export const patchExistingTodo = id => dispatch => {
+// export const toggleTodoCompletion = todoId => {
+//   return {
+//     type: types.TOGGLE_TODO_COMPLETION,
+//     payload: todoId,
+//   }
+// }
+export const toggleTodoCompletion = id => dispatch => {
   axios.patch(`http://localhost:9000/api/todos/${id}`)
     .then(res => {
       debugger
