@@ -4,8 +4,10 @@ import * as actions from '../state/action-creators'
 
 function Form(props) {
   const {
+    // states
     form,
     displayCompletedTodos,
+    // action creators
     toggleDisplayCompleteds,
     changeInput,
     addTodo,
