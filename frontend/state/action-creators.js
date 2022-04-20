@@ -39,7 +39,7 @@ export const fetchTodosFromApi = () => dispatch => {
 export const postNewTodoToApi = name => dispatch => {
   axios.post('http://localhost:9000/api/todos', { name })
     .then(res => {
-      const newlyCreatedTodo = res.data.data
+      // const newlyCreatedTodo = res.data.data
       dispatch(fetchTodosFromApi())
     })
     .catch(err => {
