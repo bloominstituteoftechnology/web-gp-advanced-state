@@ -36,6 +36,6 @@ export const fetchTodosFromApi = () => dispatch => {
 //     payload: { id: getId(), completed: false, name, },
 //   }
 // }
-export const postNewTodo = name => dispatch => {
-  
+export const postNewTodoToApi = name => dispatch => {
+  axios.post('http://localhost:9000/api/todos', { name: name })
 }
