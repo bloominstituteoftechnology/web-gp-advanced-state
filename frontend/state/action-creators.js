@@ -29,17 +29,10 @@ export const fetchTodosFromApi = () => dispatch => {
       debugger
     })
 }
-// the old one
-// export const addTodo = name => {
-//   return {
-//     type: types.ADD_NEW_TODO,
-//     payload: { id: getId(), completed: false, name, },
-//   }
-// }
 export const postNewTodoToApi = name => dispatch => {
   axios.post('http://localhost:9000/api/todos', { name })
     .then(res => {
-      // dispatch(fetchTodosFromApi())
+      // dispatch(fetchTodosFromApi()) // this works but is a bit wasteful
       const newlyCreatedTodo = res.data.data
       dispatch({ type: types.ADD_NEW_TODO, payload: newlyCreatedTodo })
     })
