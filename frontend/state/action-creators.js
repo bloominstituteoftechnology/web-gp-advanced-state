@@ -7,6 +7,11 @@ export const changeInput = ({ name, value }) => {
     payload: { name, value },
   }
 }
+export const toggleDisplayCompleteds = () => {
+  return {
+    type: types.TOGGLE_DISPLAY_COMPLETEDS,
+  }
+}
 export const addTodo = name => {
   return {
     type: types.ADD_NEW_TODO,
@@ -17,10 +22,5 @@ export const toggleTodoCompletion = todoId => {
   return {
     type: types.TOGGLE_TODO_COMPLETION,
     payload: todoId,
-  }
-}
-export const toggleDisplayCompleteds = () => {
-  return {
-    type: types.TOGGLE_DISPLAY_COMPLETEDS,
   }
 }
