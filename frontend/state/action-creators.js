@@ -28,7 +28,6 @@ export const toggleTodoCompletion = todoId => {
 export const fetchTodosFromApi = () => dispatch => {
   axios.get('http://localhost:9000/api/todos')
     .then(res => {
-      // here
       debugger
     })
     .catch(err => {
