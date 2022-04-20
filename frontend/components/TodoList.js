@@ -5,7 +5,7 @@ import * as actions from '../state/action-creators'
 
 class TodoList extends React.Component {
   componentDidMount() {
-    
+    this.props.fetchTodosFromApi()
   }
   render() {
     const { todos, displayCompletedTodos, toggleTodoCompletion } = this.props
