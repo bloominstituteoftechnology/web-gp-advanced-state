@@ -5,7 +5,7 @@ const initialTodos = []
 function todos(todosStateSlice = initialTodos, action) {
   switch (action.type) {
     case types.POPULATE_ALL_TODOS:
-      
+      return action.payload
     case types.ADD_NEW_TODO:
       // return todosStateSlice.concat(action.payload)
       return [...todosStateSlice, action.payload]
