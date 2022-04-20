@@ -4,6 +4,9 @@ import { connect } from 'react-redux'
 import * as actions from '../state/action-creators'
 
 class TodoList extends React.Component {
+  componentDidMount() {
+    
+  }
   render() {
     const { todos, displayCompletedTodos, toggleTodoCompletion } = this.props
     return (
