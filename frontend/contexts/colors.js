@@ -8,4 +8,4 @@ const colors = {
 
 export const ColorContext = createContext()
 
-export default 
+export default function ColorProvider()
