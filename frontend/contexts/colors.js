@@ -1,6 +1,7 @@
 // 1 decide what data to teleport
 // 2 pull in the create context helper
-// 3 i
+// 3 instantiate a context (and export it)
+// 4 export default a provider
 
 import React, { createContext } from 'react'
 
