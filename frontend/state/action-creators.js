@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export const changeInput = ({ name, value }) => {
   return {
-    type: 'INPUT-CHANGE',
+    type: types.INPUT_CHANGE,
     payload: { name, value },
   }
 }
