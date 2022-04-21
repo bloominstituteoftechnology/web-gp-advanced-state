@@ -26,7 +26,6 @@ root.render(
   <React.StrictMode>
     <h1>Todo App</h1>
     <ColorProvider>
-
       <Provider store={store}>
         <App />
       </Provider>
