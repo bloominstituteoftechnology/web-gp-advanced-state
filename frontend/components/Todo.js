@@ -10,6 +10,7 @@ export default function Todo({ todo, toggleStatus }) {
   return (
     <div style={{ color: pink }} onClick={() => toggleStatus(todo.id)} className="todo">
       {todo.name}{todo.completed ? checkmark : ''} {count}
+      <button onClick={inc}>increase</button>
     </div>
   )
 }
