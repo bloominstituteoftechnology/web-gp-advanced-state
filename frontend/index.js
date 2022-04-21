@@ -15,6 +15,7 @@ const store = legacy_createStore(reducer, composeWithDevTools(applyMiddleware(th
 
 import ColorProvider from './contexts/colors'
 import EmojiProvider from './contexts/emojis'
+import CountProvider from './contexts/count'
 
 import App from './components/App'
 import './styles/reset.css'
@@ -25,13 +26,15 @@ const root = createRoot(container)
 
 root.render(
   <React.StrictMode>
+    <CountProvider>
     <h1>Todo App</h1>
-    <EmojiProvider>
-      <ColorProvider>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </ColorProvider>
-    </EmojiProvider>
+      <EmojiProvider>
+        <ColorProvider>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </ColorProvider>
+      </EmojiProvider>
+    </CountProvider>
   </React.StrictMode>
 )
