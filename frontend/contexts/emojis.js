@@ -12,4 +12,10 @@ const emoji = {
 
 export const EmojiContext = createContext()
 
-
+export default function EmojiProvider(props) {
+  return (
+    <EmojiContext.Provider>
+      {props.children}
+    </EmojiContext.Provider>
+  )
+}
