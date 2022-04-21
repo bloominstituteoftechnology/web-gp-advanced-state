@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { ColorContext } from '../contexts/colors'
+import { EmojiContext } from '../contexts/emojis'
 
 export default function Todo({ todo, toggleStatus }) {
   const { pink } = useContext(ColorContext)
