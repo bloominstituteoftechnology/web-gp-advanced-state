@@ -26,10 +26,12 @@ const root = createRoot(container)
 root.render(
   <React.StrictMode>
     <h1>Todo App</h1>
-    <ColorProvider>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </ColorProvider>
+    <EmojiProvider>
+      <ColorProvider>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </ColorProvider>
+    </EmojiProvider>
   </React.StrictMode>
 )
