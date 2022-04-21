@@ -1,6 +1,8 @@
 import * as types from './action-types'
 import axios from 'axios'
 
+// onClick = () => dispatch({ type: 'foo' paload: 123 })
+
 export const changeInput = ({ name, value }) => {
   return {
     type: types.INPUT_CHANGE,
