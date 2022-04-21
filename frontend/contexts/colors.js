@@ -11,7 +11,7 @@ export const ColorContext = createContext()
 export default function ColorProvider(props) {
   return (
     <ColorContext.Provider>
-
+      {props.children}
     </ColorContext.Provider>
   )
 }
