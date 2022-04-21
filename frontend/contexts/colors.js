@@ -8,4 +8,8 @@ const colors = {
 
 export const ColorContext = createContext()
 
-export default function ColorProvider()
+export default function ColorProvider(props) {
+  return (
+    <ColorProvider
+  )
+}
