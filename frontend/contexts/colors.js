@@ -10,6 +10,8 @@ export const ColorContext = createContext()
 
 export default function ColorProvider(props) {
   return (
-    <ColorProvider
+    <ColorContext.Provider>
+
+    </ColorContext.Provider>
   )
 }
