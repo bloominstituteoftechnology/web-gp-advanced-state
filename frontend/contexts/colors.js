@@ -13,7 +13,7 @@ const colors = {
   black: 'black',
 }
 
-// 
+// this is used inside the component that wants to consume the context
 export const ColorContext = createContext()
 
 
