@@ -13,6 +13,8 @@ const composeWithDevTools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compo
 const store = legacy_createStore(reducer, composeWithDevTools(applyMiddleware(thunk)))
 // putting together the redux store end
 
+import ColorProvider from './contexts/colors'
+
 import App from './components/App'
 import './styles/reset.css'
 import './styles/styles.css'
@@ -23,8 +25,11 @@ const root = createRoot(container)
 root.render(
   <React.StrictMode>
     <h1>Todo App</h1>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <ColorProvider>
+
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ColorProvider>
   </React.StrictMode>
 )
