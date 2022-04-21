@@ -6,4 +6,6 @@ const colors = {
   black: 'black',
 }
 
-export const ColorContext = crea
+export const ColorContext = createContext()
+
+export default 
