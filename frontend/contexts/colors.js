@@ -13,8 +13,11 @@ const colors = {
   black: 'black',
 }
 
+// 
 export const ColorContext = createContext()
 
+
+// this fellow is used to wrap the part of the tree that wants the data
 export default function ColorProvider(props) {
   return (
     <ColorContext.Provider value={colors}>
