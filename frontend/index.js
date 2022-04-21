@@ -26,8 +26,8 @@ const root = createRoot(container)
 
 root.render(
   <React.StrictMode>
-    <CountProvider>
     <h1>Todo App</h1>
+    <CountProvider>
       <EmojiProvider>
         <ColorProvider>
           <Provider store={store}>
