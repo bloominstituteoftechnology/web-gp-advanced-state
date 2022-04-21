@@ -14,6 +14,7 @@ const store = legacy_createStore(reducer, composeWithDevTools(applyMiddleware(th
 // putting together the redux store end
 
 import ColorProvider from './contexts/colors'
+import EmojiProvider from './contexts/emojis'
 
 import App from './components/App'
 import './styles/reset.css'

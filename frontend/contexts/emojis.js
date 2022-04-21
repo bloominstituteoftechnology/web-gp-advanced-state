@@ -14,7 +14,7 @@ export const EmojiContext = createContext()
 
 export default function EmojiProvider(props) {
   return (
-    <EmojiContext.Provider>
+    <EmojiContext.Provider value={emoji}>
       {props.children}
     </EmojiContext.Provider>
   )
