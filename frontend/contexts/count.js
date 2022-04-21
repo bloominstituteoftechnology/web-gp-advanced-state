@@ -7,5 +7,9 @@ export default function CountProvider(props) {
   const inc = () => setCount(count + 1)
   const dec = () => setCount(count - 1)
 
-  
+  return (
+    <CountContext.Provider value={{  }}>
+
+    </CountContext.Provider>
+  )
 }
