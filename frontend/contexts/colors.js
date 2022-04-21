@@ -3,5 +3,6 @@
 
 const colors = {
   red: 'red',
-  pink: 'pink'
+  pink: 'pink',
+  black: 'black',
 }
