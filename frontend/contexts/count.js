@@ -4,7 +4,7 @@ export const CountContext = createContext()
 
 export default function CountProvider(props) {
   let [count, setCount] = useState(0)
-  const inc = () => count++
+  const inc = () => setCount(count => count + 1)
   const dec = () => setCount(count - 1)
 
   return (
