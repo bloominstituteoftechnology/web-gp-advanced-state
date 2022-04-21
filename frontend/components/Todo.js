@@ -6,7 +6,7 @@ import { CountContext } from '../contexts/count'
 export default function Todo({ todo, toggleStatus }) {
   const { pink } = useContext(ColorContext)
   const { checkmark } = useContext(EmojiContext)
-  const { count, inc, dec } = useContext(CountContext)
+  const { count, inc } = useContext(CountContext)
   return (
     <div style={{ color: pink }} onClick={() => toggleStatus(todo.id)} className="todo">
       {todo.name}{todo.completed ? checkmark : ''} {count}
