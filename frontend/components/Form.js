@@ -28,6 +28,7 @@ function Form(props) {
   return (
     <>
       <form id="todoForm" onSubmit={onSubmit}>
+        {count}
         <input
           value={form.todoName}
           onChange={onChange}
