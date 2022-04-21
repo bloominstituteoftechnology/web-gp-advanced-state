@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../state/action-creators'
+import { CountContext } from '../contexts/count'
 
 function Form(props) {
   const {
@@ -14,6 +15,7 @@ function Form(props) {
     // info derived from state
     disabled,
   } = props
+  const { count } = useContext(CountContext)
 
   const onChange = evt => {
     const { name, value } = evt.target
